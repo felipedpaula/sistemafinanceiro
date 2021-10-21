@@ -4,7 +4,8 @@ import { Item } from './types/Item';
 import { Category } from './types/Category';
 import { categories } from './data/categories';
 import { items } from './data/items';
-import { getCurrentMonth } from './helpers/dateFilter';
+import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
+import { TableArea } from './components/TableArea'
 
 const App = () => {
 
@@ -13,7 +14,7 @@ const App = () => {
   const [filteredList, setFilteredList] = useState<Item[]>([]);
 
   useEffect(()=> {
-    
+    setFilteredList(filterListByMonth(list, currentMonth));
   }, [list, currentMonth]);
 
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <C.Body>
         <C.AreaCentral>
 
+          <TableArea list={filteredList}/>
         </C.AreaCentral>
       </C.Body>
     </C.Container>

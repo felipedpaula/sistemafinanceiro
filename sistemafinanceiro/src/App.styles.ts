@@ -19,7 +19,9 @@ export const HeaderText = styled.h1`
 
 export const Body = styled.div`
     background-color: #C0C0CB;
-    height: 100vh;
+    min-height: 780px;
+    height: 100%;
+    padding-top: 20px;
 `;
 
 export const AreaCentral = styled.div`
