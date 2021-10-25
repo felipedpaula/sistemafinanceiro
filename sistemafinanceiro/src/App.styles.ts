@@ -26,6 +26,5 @@ export const Body = styled.div`
 
 export const AreaCentral = styled.div`
     margin: auto;
-    max-width: 980px;
     width: 100%;
 `;
